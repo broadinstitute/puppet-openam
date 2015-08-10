@@ -19,7 +19,7 @@ class openam::deploy {
     owner  => "${openam::tomcat_user}",
     group  => "${openam::tomcat_user}",
     mode   => 0755,
-    source => "puppet:///files/${module_name}/${environment}/${war}",
+    source => "puppet:///extra_files/${war}",
     notify => Service["${openam::tomcat_service}"]
   }
 }
